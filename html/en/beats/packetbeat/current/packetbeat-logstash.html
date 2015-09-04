@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Using Packetbeat with Logstash</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Packetbeat reference [1.0.0-beta2]" /><link rel="up" href="index.html" title="Packetbeat reference [1.0.0-beta2]" /><link rel="prev" href="exported-fields.html" title="Exported fields" /><link rel="next" href="sample-dashboards.html" title="Sample dashboards" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Using Packetbeat with Logstash</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Packetbeat reference [1.0.0-beta3]" /><link rel="up" href="index.html" title="Packetbeat reference [1.0.0-beta3]" /><link rel="prev" href="exported-fields.html" title="Exported fields" /><link rel="next" href="sample-dashboards.html" title="Sample dashboards" />
   
  	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" rel="stylesheet" href="/static/css/en-us.css" />
@@ -586,7 +586,7 @@
 
             <!-- start body -->
 <div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Packetbeat reference
-      [1.0.0-beta2]
+      [1.0.0-beta3]
     </a></span> » <span class="breadcrumb-node">Using Packetbeat with Logstash</span></div><div class="navheader"><span class="prev"><a href="exported-fields.html">
               « 
               Exported fields</a>
@@ -595,7 +595,7 @@
            
           <a href="sample-dashboards.html">Sample dashboards
                »
-            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="packetbeat-logstash"></a>Using Packetbeat with Logstash<a href="https://github.com/elastic/packetbeat/edit/1.0.0-beta2/docs/logstash.asciidoc" class="edit_me" title="Edit this page on GitHub" rel="nofollow">edit</a></h1></div></div></div><p>Our <a class="xref" href="packetbeat-getting-started.html" title="Getting started"><em>Getting started</em></a> guide walks you through installing the
+            </a></span></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="packetbeat-logstash"></a>Using Packetbeat with Logstash<a href="https://github.com/elastic/packetbeat/edit/1.0.0-beta3/docs/logstash.asciidoc" class="edit_me" title="Edit this page on GitHub" rel="nofollow">edit</a></h1></div></div></div><p>Our <a class="xref" href="packetbeat-getting-started.html" title="Getting started"><em>Getting started</em></a> guide walks you through installing the
 simplest architecture for the Packetbeat system. This is nice and easy to get
 started with and enough for networks with small traffic. It also uses the
 minimum amount of servers: a single machine running Elasticsearch + Kibana. The
@@ -614,7 +614,7 @@ input plugin</a> and then sends the transactions to Elasticsearch using the
 <a class="ulink" href="http://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html" target="_top">Elasticsearch
 output plugin</a>. The Elasticsearch plugin of Logstash uses the bulk API, making
 indexing very efficient.</p><p>To use this setup, disable the Elasticsearch output and use instead the
-<a class="link" href="_configuration.html#redis-output" title="Redis Output">Redis output</a> in the Packetbeat configuration file:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-yaml">output:
+<a class="link" href="configuration.html#redis-output" title="Redis Output">Redis output</a> in the Packetbeat configuration file:</p><div class="pre_wrapper"><pre class="programlisting prettyprint lang-yaml">output:
   redis:
     # Uncomment out this option if you want to output to Redis.
     # The default is false.
